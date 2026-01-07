@@ -20,7 +20,7 @@ Please cite this paper when using this dataset.
 **Evaluation metrics**:
 - The regression model was evaluated on R<sup>2</sup>, RMSE, MSE, and MAE
 - The classification model was evaluated on ROC AUC, sensitivity, specificity, and F1 score
-- The specific packages for calculating these metrics are accessible in the model training script under the file name "ML_runner.py"
+- The specific packages for calculating these metrics are accessible in the model training script under the file name "Customize_script.py"
 
 
 ## Installation
@@ -36,8 +36,14 @@ Before you run this script, make sure you have the following installed:
 
 You can install the necessary libraries using pip:
 ```bash
-pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
+pip install -r requirements.txt
 ```
+
+Alternatively, you can install them individually:
+```bash
+pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn lazypredict
+```
+
 To get started with this project, follow these steps:
 
 1. Clone the repository:
@@ -82,7 +88,7 @@ python script.py --file_path path/to/mstdata.csv --target_label combined_label -
 
 ### Usage Example
 ``` bash
-python ML_runner.py --file_path path/to/mstdata.csv --target_label combined_label --algorithm RandomForest --n_estimators 200
+python Customize_script.py --file_path path/to/mstdata.csv --target_label combined_label --algorithm RandomForest --n_estimators 200
 
 
 ```
@@ -144,7 +150,7 @@ pip install pandas scikit-learn lazypredict imbalanced-learn
 Run the script with the datset file, file path and target column
 
 ``` bash
-python ML_TEST.py --file_path /path/to/mstdata.csv --target_label combined_label --algorithm LazyClassifier
+python Lazy_script.py --file_path /path/to/mstdata.csv --target_label combined_label --algorithm LazyClassifier
 ```
 ### Command-line Arguments
 - `--file_path`: Path to the CSV file containing the dataset (required).
